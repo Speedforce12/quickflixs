@@ -24,6 +24,8 @@ const Trending = () => {
   const settings = {
     dots: false,
     infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,

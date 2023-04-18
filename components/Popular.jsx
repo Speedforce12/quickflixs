@@ -26,8 +26,11 @@ const Popular = () => {
     dots: false,
     infinite: true,
     speed: 500,
+    autoplay: true,
+    autoplaySpeed:3000,
     slidesToShow: 5,
     slidesToScroll: 1,
+    
     responsive: [
       {
         breakpoint: 1024,
