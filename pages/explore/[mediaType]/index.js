@@ -35,7 +35,7 @@ const MoviePage = ({ genresData }) => {
   const fetchGenreMovies = async () => {
     setLoading(true);
     const res = await movieDB.get(
-      `/discover/${mediaType}?NEXT_PUBLIC_API_KEY=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&sort_by=${filters.sort_by}&include_adult=true&with_genres=${filters.with_genres}`
+      `/discover/${mediaType}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&sort_by=${filters.sort_by}&include_adult=true&with_genres=${filters.with_genres}`
     );
     const info = await res.data;
     setData(info);
@@ -49,7 +49,7 @@ const MoviePage = ({ genresData }) => {
 
   const fetchMoviesPerPage = async () => {
     const res = await movieDB.get(
-      `/discover/${mediaType}?NEXT_PUBLIC_API_KEY=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&sort_by=${filters.sort_by}&include_adult=true&with_genres=${filters.with_genres}&page=${pageNumber}`
+      `/discover/${mediaType}?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&sort_by=${filters.sort_by}&include_adult=true&with_genres=${filters.with_genres}&page=${pageNumber}`
     );
     const info = await res.data;
     setData({
