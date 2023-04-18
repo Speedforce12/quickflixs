@@ -7,7 +7,7 @@ export default async function handler(req, res) {
       const { q: query } = req.query;
 
       const response = await movieDB.get(
-        `search/multi?NEXT_PUBLIC_API_KEY=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&&query=${query}&include_adult=false`
+        `search/multi?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&&query=${query}&include_adult=false`
       );
       const media = await response.data;
 
