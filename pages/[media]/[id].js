@@ -14,7 +14,6 @@ const DetailPage = ({ stream }) => {
 
   const [isLoading, setLoading] = useState(true);
 
-  // const imageUrl = "https://image.tmdb.org/t/p/original";
 
   // filter out the directors
   const director = stream.credits.crew.filter(({ job }) => job === "Director");
