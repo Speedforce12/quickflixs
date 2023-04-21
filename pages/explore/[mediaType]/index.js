@@ -85,7 +85,7 @@ const MoviePage = ({ genresData }) => {
   };
 
   return (
-    <div className='mt-10 max-w-7xl mx-auto min-h-screen'>
+    <div className='mt-10 min-h-screen'>
       <div className='flex flex-col p-2'>
         <div className='flex items-center justify-between flex-col md:flex-row gap-5'>
           <h2 className='text-white font-semibold text-2xl tracking-tight flex gap-3'>

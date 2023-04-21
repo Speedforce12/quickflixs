@@ -39,7 +39,7 @@ const DetailPage = ({ stream }) => {
         <link rel='icon' href='/images/logo.png' />
       </Head>
 
-      <div className='max-w-7xl w-full mx-auto mt-14 px-5'>
+      <div className='w-full mx-auto mt-14 px-5'>
         <div className='flex flex-col md:flex-row gap-10'>
           <div className=' md:w-80 w-full relative'>
             <Image
@@ -67,7 +67,7 @@ const DetailPage = ({ stream }) => {
             <h3 className='text-neutral-500 font-medium italic text-lg my-2'>
               {stream.tagline}
             </h3>
-            <div className='flex items-center gap-3 mb-7'>
+            <div className='flex items-center gap-3 mb-7 flex-wrap'>
               {stream.genres.map((genre) => (
                 <span
                   className='text-sm text-white bg-rose-500 px-1  rounded-lg'

@@ -31,13 +31,20 @@ const Header = () => {
             className='text-white text-lg duration-200 hover:text-orange-500 hidden lg:block'>
             TV Shows
           </Link>
+          <Link
+            href='/people'
+            className='text-white text-lg duration-200 hover:text-orange-500 hidden lg:block'>
+            People
+          </Link>
 
-          <FiSearch className='text-white text-xl duration-200 hover:text-orange-500 cursor-pointer' onClick={()=>setShowMiniNav(!showMiniNav)} />
+          <FiSearch
+            className='text-white text-xl duration-200 hover:text-orange-500 cursor-pointer'
+            onClick={() => setShowMiniNav(!showMiniNav)}
+          />
 
           {showMiniNav && (
-            <di className="absolute top-16 right-1">
-              
-              <MiniSearchBar setShowMiniNav={ setShowMiniNav} />
+            <di className='absolute top-16 right-1'>
+              <MiniSearchBar setShowMiniNav={setShowMiniNav} />
             </di>
           )}
 
@@ -56,6 +63,12 @@ const Header = () => {
                     className='text-white text-lg hover:text-orange-500 duration-200 block'
                     onClick={() => setShowNav(false)}>
                     TV Shows
+                  </Link>
+                  <Link
+                    href='/people'
+                    className='text-white text-lg hover:text-orange-500 duration-200 block'
+                    onClick={() => setShowNav(false)}>
+                    People
                   </Link>
                 </nav>
                 <MdClose

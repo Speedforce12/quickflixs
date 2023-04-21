@@ -21,7 +21,7 @@ export default function Home({ upComing }) {
       <main className=''>
         <HeroBanner movie={upComing} />
 
-        <div className='max-w-7xl w-full mx-auto mt-10 flex flex-col gap-5 h-full '>
+        <div className='mt-10 flex flex-col gap-5'>
           <Trending />
           <Popular />
           <TopRated />
