@@ -51,10 +51,10 @@ const Header = () => {
           <div className='flex items-center lg:hidden'>
             {showNav ? (
               <>
-                <nav className='absolute duration-500 ease-in-out top-16 left-0 w-full bg-black py-4 px-6'>
+                <nav className='absolute duration-500 ease-in-out top-16 left-0 w-full bg-black py-4 px-6 space-y-2'>
                   <Link
                     href='/explore/movie'
-                    className='text-white text-lg hover:text-orange-500 duration-200 block mb-4'
+                    className='text-white text-lg hover:text-orange-500 duration-200 block'
                     onClick={() => setShowNav(false)}>
                     Movie
                   </Link>
