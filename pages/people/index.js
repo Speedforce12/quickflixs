@@ -11,8 +11,6 @@ const PeoplePage = () => {
     staleTime: 1800000,
   });
 
-  console.log(person);
-
   return (
     <div className='mt-10 min-h-screen w-full mx-auto px-10 flex flex-col'>
       <h2 className='text-2xl text-white font-semibold'>Popular Peoples</h2>
