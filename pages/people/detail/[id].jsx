@@ -2,9 +2,16 @@ import { getPersonDetails } from "@/lib/people";
 import Image from "next/image";
 import DefaultPoster from "/public/images/no-poster.png";
 import { useState } from "react";
+import PeopleMovieCard from "@/components/PeopleMovieCard";
 
 const PersonDetails = ({ person }) => {
   const [loading, setLoading] = useState(true);
+
+  const popular = person.combined_credits.cast.filter(
+    ({ vote_average }) => vote_average >= 8
+  );
+
+  console.log(popular);
 
   console.log(person);
   return (
@@ -59,7 +66,9 @@ const PersonDetails = ({ person }) => {
               <li>
                 <span className='font-bold'>
                   Gender
-                  <p className='font-light'>{person.gender === 1 ? "Female" : "Male"}</p>
+                  <p className='font-light'>
+                    {person.gender === 1 ? "Female" : "Male"}
+                  </p>
                 </span>
               </li>
             </ul>
@@ -68,7 +77,7 @@ const PersonDetails = ({ person }) => {
       </div>
 
       {/* right side */}
-      <div className='w-full flex-1 flex-col flex '>
+      <div className='w-full overflow-hidden flex-col flex '>
         <h2 className='font-bold text-white md:text-2xl xl:text-3xl text-2xl'>
           {person.name}
         </h2>
@@ -80,6 +89,19 @@ const PersonDetails = ({ person }) => {
           <p className='text-white text-sm font-normal my-3'>
             {person.biography}
           </p>
+
+          <div className='mt-5 w-full'>
+            <h2 className='font-bold text-white mb-4 text-lg'>
+              Popular Medias
+            </h2>
+            <div className='flex overflow-x-auto gap-5'>
+              {popular.map((media) => (
+                <div>
+                  <PeopleMovieCard media={media} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>

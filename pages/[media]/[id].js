@@ -10,10 +10,7 @@ import { useState } from "react";
 import Head from "next/head";
 
 const DetailPage = ({ stream }) => {
-
-
   const [isLoading, setLoading] = useState(true);
-
 
   // filter out the directors
   const director = stream.credits.crew.filter(({ job }) => job === "Director");
